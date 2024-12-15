@@ -1,4 +1,16 @@
 <?php
+//PHP, tasarımında tek iş parçacıklı (single-threaded) bir dil olduğu için doğrudan yerleşik bir "concurrency" (eşzamanlılık) desteğine sahip değildir. Ancak, PHP'de eşzamanlı işlem yapmanın birkaç yolu vardır:
+//Çoklu İşlem (Multiprocessing):
+//pthreads gibi eklentiler (ancak PHP 7.4 ve sonrası sürümlerde kullanılamaz) veya pcntl_fork() ile işlemler arasında paralel çalışma yapılabilir. Bu, işlemleri birbirinden bağımsız hale getirir ve eşzamanlı işleme olanak sağlar.
+//Çoklu İstek (Multiple Requests):
+//PHP, web sunucusu üzerinden paralel istekler alarak eşzamanlı işlem yapabilir. Bu, PHP'nin paralel işleme desteklememesi nedeniyle, birden fazla PHP betiği çalıştırarak eşzamanlılık elde edilebilir.
+//Asenkron Programlama:
+//ReactPHP gibi kütüphanelerle asenkron işlem yapılabilir. Bu tür kütüphaneler, PHP'yi olay tabanlı asenkron programlamaya uygun hale getirir ve aynı anda birçok işlemi beklemeye alabilirsiniz.
+//Queue Sistemleri:
+//PHP, eşzamanlı işlemleri yönetmek için RabbitMQ, Redis veya Beanstalkd gibi mesaj kuyruğu sistemlerini kullanabilir. Bu yöntem, arka planda işler yaparken PHP'nin bekleme sürelerini azaltabilir ve paralel işleme olanak tanıyabilir.
+//Threading Kütüphaneleri:
+//Swoole veya RoadRunner gibi PHP extension'ları ile PHP, çoklu iş parçacığı (threading) ve yüksek verimli işlemler gerçekleştirebilir.
+//Özetle, PHP'de yerleşik olarak doğrudan concurrency desteği yoktur, ancak yukarıda belirtilen yöntemlerle eşzamanlı işlem yapılabilir.
 
 //pcntl_fork(), PHP'de bir işlem (process) oluşturmak için kullanılan bir fonksiyondur.
 //Bu fonksiyon, mevcut çalışan işlemi (ana işlem veya parent process) kopyalar.
