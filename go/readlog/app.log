@@ -1,0 +1,10 @@
+[2024-12-16 09:25:00.123456] [*********] [reqid-1] [nodevice] [nouser] [noroute /api/login] [doctrine] [INFO] Executing query: SELECT * FROM users WHERE email = ?
+[2024-12-16 09:25:01.234567] [*********] [reqid-2] [deviceid-12345] [user-101] [route /api/orders] [service-order] [DEBUG] Order validation successful
+[2024-12-16 09:25:02.345678] [*********] [reqid-3] [deviceid-67890] [nouser] [route /api/register] [service-user] [ERROR] User registration failed: Duplicate email
+[2024-12-16 09:25:03.456789] [*********] [reqid-4] [nodevice] [user-102] [route /api/cart] [service-cart] [INFO] Cart updated successfully
+[2024-12-16 09:25:04.567890] [*********] [reqid-5] [deviceid-54321] [user-103] [route /api/checkout] [service-payment] [DEBUG] Payment request initiated
+[2024-12-16 09:25:05.678901] [*********] [reqid-6] [nodevice] [nouser] [route /api/status] [doctrine] [DEBUG] Fetching application status
+[2024-12-16 09:25:06.789012] [*********] [reqid-7] [deviceid-11111] [user-104] [route /api/logout] [service-user] [INFO] User logged out successfully
+[2024-12-16 09:25:07.890123] [*********] [reqid-8] [nodevice] [nouser] [noroute /] [service-core] [WARN] Deprecated API call detected
+[2024-12-16 09:25:08.901234] [*********] [reqid-9] [deviceid-99999] [nouser] [route /api/profile] [service-user] [DEBUG] Profile data updated
+[2024-12-16 09:25:09.012345] [*********] [reqid-10] [nodevice] [nouser] [route /api/search] [service-search] [ERROR] Search query execution failed: Timeout
